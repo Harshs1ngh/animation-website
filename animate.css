@@ -1,15 +1,63 @@
-* {
+body{
+    min-height: 100vh;
     margin: 0;
+    font-family: Poppins;
+    color: #1E1E1E;
+    background-color: #CDCDCD;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 150px, #0001 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+    url(images/bg.jpg);
+}
+*{
     padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid red; */
+    margin: 0;
 }
 html, body {
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#main {
-    height: 100%;
-    width: 100%;
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.banner .product{
+    /* background-color: red; */
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0px;
+    display: flex;
+}
+.banner .product .soda{
+    background: 
+                var(--url) var(--left) 0,
+                url(animeimage.png);
+    background-size: auto 100%;
+    width: 270px;
+    aspect-ratio: 2/3;
+    background-blend-mode: multiply;
+    mask-image: url(animeimage.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+} 
+.banner .product:hover{ 
+    --left: -1000px;
+    transform: translateX(-50%) translateY(-120px);
+
 }
