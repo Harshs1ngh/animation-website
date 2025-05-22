@@ -23,6 +23,20 @@ html, body {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+header{
+    width: min(1200px, 90vw);
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 50px;
+    height: 0px;
+    flex-wrap: wrap;
+}
+header h1{
+    font-family: "Karantina";
+    font-size: 16vw;
+    line-height: 0.9em;
+    margin-left: -5%;
+}
 .banner{
     height: 100vh;
     overflow: hidden;
