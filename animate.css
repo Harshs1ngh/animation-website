@@ -43,6 +43,14 @@ header h1{
     margin-left: -6%;
     -webkit-text-stroke: 4px black;
 }
+#cloudimg img{
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 150px;
+    position: relative;
+    right: 770px;
+    bottom: -80px;
+}
 .banner{
     height: 100vh;
     overflow: hidden;
@@ -50,11 +58,11 @@ header h1{
 }
 .banner .product{
     /* background-color: red; */
-    width: 300px;
+    width: 210px;
     height: 400px;
     position: absolute;
     bottom: 170px;
-    left: 50%;
+    left: 54%;
     transform: translateX(-50%);
     z-index: 1;
     transition: 0.7s;
@@ -91,9 +99,9 @@ header h1{
 }
 .banner .rock img:nth-child(1){
 height: 170px;
-left: 50%;
+left: 54%;
 transform: translateX(-50%);
-bottom: 30px;
+bottom: 35px;
 }
 .banner:has(.product:hover) .rock img:nth-child(1){
     transform: translateX(-50%) translateY(50px);
