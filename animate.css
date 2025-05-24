@@ -43,13 +43,15 @@ header h1{
     margin-left: -6%;
     -webkit-text-stroke: 4px black;
 }
-#cloudimg img{
-    /* border: 2px solid red; */
-    width: 200px;
-    height: 150px;
-    position: relative;
-    right: 770px;
-    bottom: -80px;
+header .author{
+    width: 10%;
+    text-align: right;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 71%;
+    top: 28%;
+    transform: rotate(-90deg);
 }
 .banner{
     height: 100vh;
@@ -117,10 +119,9 @@ bottom: 35px;
 }
 .banner .rock img:nth-child(3){
     height: 100%;
-    left: 70%;
-    bottom: -100px;
+    left: 73%;
+    bottom: -120px;
     rotate: -25deg;
-    mix-blend-mode:multiply;
     /* z-index: -2; */
 }
 .banner:has(.product:hover) .rock img:nth-child(3){
