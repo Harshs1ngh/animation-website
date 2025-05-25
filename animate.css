@@ -120,14 +120,14 @@ bottom: 35px;
     transform: translateX(-100px) translateY(100px);
 }
 .banner .rock img:nth-child(3){
-    height: 100%;
-    left: 81%;
-    bottom: -125px;
-    rotate: -25deg;
+    height: 80%;
+    left: 80%;
+    bottom: 10px;
+    rotate: -30deg;
     /* z-index: -2; */
 }
 .banner:has(.product:hover) .rock img:nth-child(3){
-    transform: translateX(-80px) translateY(-80px);
+    transform: translateX(80px) translateY(100px);
 }
 .banner .product .soda:nth-child(2){
     opacity: 0;
@@ -139,6 +139,86 @@ bottom: 35px;
 .page2{
     height: 100%;
     width: 100%;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 150px, rgba(2, 2, 2, 0.067) 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #adadadcc),
+    url(bgpage2.jpg);
+    background-size: cover;       
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+.boldtext{
+    --row: 6;
+    font-size: 7.7em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.boldtext div:nth-child(1){
+    position: relative;
+    left: 26%;
+}
+.boldtext div:nth-child(2){
+    position: relative;
+    left: 42%;
+}
+.boldtext div:nth-child(3){
+    position: relative;
+    left: 22%;
+}
+.boldtext div:nth-child(4){
+    position: relative;
+    left: 37%;
+}
+.boldtext div:nth-child(5){
+    position: relative;
+    left: 18%;
+}
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+#gojocan img{
+    width: 10%;
+    height: 40%;
+    position: absolute;
+    left: 6%;
+    bottom: -470px;
+    transform: rotate(10deg);
+}
+#gojocan img:hover{
+    animation: bounce 0.5s infinite;
+}
+#luffy img{
+    width: 19%;
+    height: 40%;
+    position: absolute;
+    right: 4%;
+    bottom: -730px;
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+
+.page3{
+    height: 100%;
+    width: 100%;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 150px, rgba(2, 2, 2, 0.067) 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #adadadcc),
+    url(bgpage2.jpg);
+    background-size: cover;       
+    background-repeat: no-repeat;   
+    background-position: center;
 }
 
 
@@ -146,6 +226,31 @@ bottom: 35px;
 
 
 
+
+
+
+
+
+
+
+@keyframes bounce{
+    0%{ transform: rotate(10deg);}
+    30%{transform: rotate(-10deg);}
+    50%{ transform: rotate(10deg);}
+    70%{ transform: rotate(-10deg);}
+    100%{ transform: rotate(10deg);}
+}
+
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(30px);
+    }45%,55%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(30px);
+    }
+}
 @keyframes floatUpDown{
     0%, 100%{
         transform: translateY(0);
