@@ -240,7 +240,7 @@ bottom: 35px;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    animation: autoRun 5s linear infinite;
+    animation: autoRun 7s linear infinite;
     z-index: 2;
 }
 @keyframes autoRun{
@@ -259,7 +259,7 @@ bottom: 35px;
         rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
         translateZ(430px);
 
-    backface-visibility: hidden;
+    backface-visibility:hidden;
 }
 
 
@@ -357,6 +357,6 @@ bottom: 35px;
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-15px);
+        transform: translateY(-20px);
     }
 }
