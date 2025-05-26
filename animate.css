@@ -18,6 +18,10 @@
     background-repeat: no-repeat;   
     background-position: center; 
 }
+body {
+    cursor: url('ZeeResizerwhite.png'), auto;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -37,15 +41,16 @@ header{
     flex-wrap: wrap;
     animation: floatUpDown 3s ease-in-out infinite;
 }
+
 header h1{
     font-family: "Karantina" system-ui;
     font-size: 16vw;
     line-height: 0.8em;
     margin-left: -6%;
-    -webkit-text-stroke: 4px black;
+    -webkit-text-stroke: 4px rgb(0, 0, 0);
 }
 header .author{
-    color: white;
+    color: rgb(255, 255, 255);
     width: 10%;
     text-align: right;
     flex-direction: column;
@@ -192,17 +197,16 @@ bottom: 35px;
     transform: rotate(10deg);
 }
 #gojocan img:hover{
-    animation: bounce 0.5s infinite;
+    animation: bounce 0.5s ease;
 }
 #luffy img{
-    width: 19%;
-    height: 40%;
+    width: 15%;
+    height: 34%;
     position: absolute;
     right: 4%;
     bottom: -730px;
-    animation: floatUpDown 2s ease-in-out infinite;
+    animation: breathe 2s ease-in-out infinite;
 }
-
 
 .page3{
     height: 100%;
@@ -221,24 +225,121 @@ bottom: 35px;
     background-position: center;
 }
 
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 24%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 5s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-17deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+        translateZ(430px);
+
+    backface-visibility: hidden;
+}
+
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    top: -100px;
+    left: 40px;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: left;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(gojo_can.png);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    animation: floatUpDown 2s ease-in-out infinite;
+    z-index: 1;
+}
 
 
 
 
 
 
-
-
-
-
-
+@keyframes breathe {
+    0%,100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+    }
+}
 
 @keyframes bounce{
     0%{ transform: rotate(10deg);}
     30%{transform: rotate(-10deg);}
-    50%{ transform: rotate(10deg);}
-    70%{ transform: rotate(-10deg);}
-    100%{ transform: rotate(10deg);}
 }
 
 @keyframes autoBlurAnimation{
