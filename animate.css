@@ -286,10 +286,12 @@ bottom: 35px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 16em;
     line-height: 1em;
-    color: #25283B;
+    color: #2b1b3e;
     position: relative;
+    background-color: rgb(131, 133, 133);
     top: -100px;
     left: 40px;
+    border-radius: 20px;
 }
 .banner .content h1::after{
     position: absolute;
@@ -320,6 +322,25 @@ bottom: 35px;
     animation: floatUpDown 2s ease-in-out infinite;
     z-index: 1;
 }
+
+.page4{
+    height: 100%;
+    width: 100%;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 150px, rgba(2, 2, 2, 0.067) 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #adadadcc),
+    url(bgpage2.jpg);
+    background-size: cover;       
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+
+
 
 
 
