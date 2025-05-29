@@ -339,6 +339,23 @@ bottom: 35px;
     background-repeat: no-repeat;   
     background-position: center;
 }
+.text-content{
+    border: 2px solid black;
+    width: 65%;
+    height: 80%;
+    position: relative;
+    left:29%;
+    bottom: -70px;
+}
+.text-content h1{
+    text-align: center;
+}
+.text-content p:nth-child(1){
+    text-align: left;
+}
+.text-content p:nth-child(2){
+    text-align: right;
+}
 
 
 
