@@ -365,8 +365,45 @@ bottom: 35px;
     bottom: 61%;
 }
 
+.gokucan4{
+    width: 15%;
+    height: 60%;
+    position: relative;
+    bottom: 60%;
+    left: 7%;
+    transform: rotate(-10deg);
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.gokucan4::after , .gokucan4::before{
+    
+    content: '';
+    position: absolute;
+    height: 105%;
+    width: 100%;
+    left: -0.5%;
+    top: 0%;
+    /* background-image: conic-gradient(rgb(255, 123, 0), rgb(0, 200, 255), rgb(0, 255, 68), rgb(0, 42, 255),rgb(255, 123, 0)); */
+    background-image: conic-gradient(from var(--angle), rgb(188, 87, 37),rgb(0, 0, 0),rgb(188, 87, 37));
+    z-index: -1;
+    border-radius: 70px;
+    animation: 3s spin linear infinite;
+}
+.gokucan4::before{
+    filter: blur(1.5rem);
+    opacity: 2.5;
+}
 
-
+@keyframes spin{
+    from{
+        --angle:0deg;
+    } to{
+        --angle: 360deg;
+    }
+}
 
 
 
