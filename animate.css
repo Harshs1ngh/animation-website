@@ -286,7 +286,7 @@ bottom: 35px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 16em;
     line-height: 1em;
-    color: #2b1b3e;
+    color: #25133a;
     position: relative;
     background-color: rgb(131, 133, 133);
     top: -100px;
@@ -344,7 +344,7 @@ bottom: 35px;
     height: 80%;
     position: relative;
     left:29%;
-    bottom: -70px;
+    bottom: -130px;
 }
 .text-content h1{
     text-align: center;
@@ -356,13 +356,6 @@ bottom: 35px;
     line-height: 1.6;
     margin: 15px 0;
     text-align: justify;
-}
-.video-content{
-    border: 2px solid red;
-    width: 100%;
-    height: 80%;
-    position: relative;
-    bottom: 61%;
 }
 
 .gokucan4{
