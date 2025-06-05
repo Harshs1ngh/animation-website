@@ -205,7 +205,7 @@ bottom: 35px;
     position: absolute;
     right: 4%;
     bottom: -730px;
-    animation: breathe 2s ease-in-out infinite;
+    animation: breathe 3s ease-in-out infinite;
 }
 
 .page3{
@@ -408,7 +408,7 @@ bottom: 35px;
         opacity: 1;
     }
     50% {
-        transform: scale(1.15);
+        transform: scale(1.10);
         opacity: 0.9;
     }
 }
