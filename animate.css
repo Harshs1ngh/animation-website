@@ -57,7 +57,7 @@ header .author{
     gap: 10px;
     position: absolute;
     right: 81%;
-    top: 220px;
+    top: 230px;
     transform: rotate(-90deg);
 }
 .banner{
@@ -116,7 +116,7 @@ bottom: 35px;
     transform: translateX(-50%) translateY(50px);
 }
 .banner .rock img:nth-child(2){
-    height: 50%;
+    height: 50%;   
     left: 0;
     bottom: 0;
     z-index: -2;
